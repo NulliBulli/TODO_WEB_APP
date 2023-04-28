@@ -4,8 +4,8 @@ function App() {
   return (
     <div className="App">
       {/* Header (Module?)*/}
-      <h1>TODO Overview</h1>
-      {/* todolist main route */}
+
+      {/* todolist overview route */}
 
       {/* Footer (Module?) */}
     </div>

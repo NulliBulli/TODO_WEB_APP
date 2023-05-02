@@ -10,7 +10,7 @@ function App() {
       {/* <Header /> */}
       <TodoOverview />
       {/* <InputTodoModal /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -23,7 +23,6 @@ export function InputTodoModal() {
         <label
           htmlFor="exampleFormControlTextarea2"
           className="form-label"
-          style={{ background: "green" }}
         >
           Describe your ToDO!
         </label>
@@ -31,7 +30,7 @@ export function InputTodoModal() {
         <textarea
           className="form-control"
           id="exampleFormControlTextarea2"
-          style={{ color: "green", background: "yellow", height: "75%" }}
+          style={{height: "75%" }}
           rows={3}
           defaultValue={""}
         />

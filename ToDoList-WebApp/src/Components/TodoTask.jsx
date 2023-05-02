@@ -1,25 +1,23 @@
 import DeleteButton from "./DeleteButton";
 import { EditButton } from "./EditButton";
 
-const TodoTask = (props) => {
+export function TodoTask(props) {
   const test = "0";
   return (
     <>
       <div
-        className="container"
+        className="container bg-light"
         style={{
-          border: "5px solid green",
           marginBottom: "20px",
           borderRadius: "10px",
           minHeight: "100px",
-          overflow: "scroll",
+          overflow: "hidden",
         }}
       >
         <div className="row">
           <div
             className="col-md-auto text-center"
             style={{
-              background: "red",
               display: "grid",
               alignItems: "center",
               maxWidth: "50px",
@@ -28,8 +26,8 @@ const TodoTask = (props) => {
             <div
               className="form-check"
               style={{
-                background: "green",
                 width: "35px",
+                height: "0px"
               }}
             >
               <input
@@ -46,29 +44,23 @@ const TodoTask = (props) => {
             </div>
           </div>
 
-          <div title="inputTextWrapper" className="col-5">
+          <div title="inputTextWrapper" className="d-flex flex-column col-5 m-3">
             <div
-              className="row"
+              className="row m-0"
               style={{
-                background: "green",
-                height: "90px",
-                overflow: "scroll",
               }}
             >
               {props.input}
             </div>
-            <div className="row" style={{ margin: "0px" }}>
+            <div className="row">
               <div
                 className="DateWrapper"
                 style={{
-                  background: "red",
                   position: "relative",
-                  top: "50%",
-                  msTransform: "translateY(-50%)",
-                  transform: "translateY(-50%)",
+                  fontWeight: "bold"
                 }}
               >
-                {"Due to: " + props.date}
+                {props.date}
               </div>
             </div>
           </div>
@@ -77,13 +69,10 @@ const TodoTask = (props) => {
             <div
               className="percentageBox"
               style={{
-                background: "red",
                 position: "relative",
                 top: "50%",
                 msTransform: "translateY(-50%)",
                 transform: "translateY(-50%)",
-                margin: "0px",
-                right: "0",
               }}
             >
               {props.percentage + "%"}
@@ -92,10 +81,8 @@ const TodoTask = (props) => {
           <div
             className="col"
             style={{
-              background: "yellow",
               maxWidth: "107px",
               position: "relative",
-              right: "0",
             }}
           >
             <div
@@ -109,7 +96,7 @@ const TodoTask = (props) => {
                 transform: "translateY(-50%)",
               }}
             >
-              <EditButton />
+              <EditButton/>
               <DeleteButton />
             </div>
           </div>

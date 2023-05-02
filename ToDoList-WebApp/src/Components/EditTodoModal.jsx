@@ -1,13 +1,13 @@
 import DatePicker from "./DatePicker";
 
-export function InputTodoModal() {
+export function EditTodoModal() {
   return (
-    <div className="AddInputModal">
+    <div className="EditModal">
       {/* link to new Todo */}
       {/* link to edit specific Todo */}
 
       <div
-        className="AddModalWrapper"
+        className="EditModalWrapper"
         style={{
           backgroundColor: "white",
           display: "grid",
@@ -29,15 +29,17 @@ export function InputTodoModal() {
           }}
         >
           <label htmlFor="exampleFormControlTextarea2" className="form-label">
-            Write a descriptiion of your task:
+            Changes to be made:
           </label>
 
           <textarea
             className="form-control"
             id="exampleFormControlTextarea2"
-            style={{ Height: "75%" }}
+            style={{ height: "75%" }}
             rows={15}
-            defaultValue={""}
+            defaultValue={
+              "Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen"
+            }
           />
           <div className="container" style={{ padding: "10px" }}>
             <div className="row">
@@ -57,4 +59,4 @@ export function InputTodoModal() {
   );
 }
 
-export default InputTodoModal;
+export default EditTodoModal;

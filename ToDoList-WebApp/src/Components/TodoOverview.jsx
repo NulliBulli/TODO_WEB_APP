@@ -5,20 +5,21 @@ import TodoTask from "./TodoTask";
 export function TodoOverview() {
   return (
     <div className="TodoOverview">
-      {/* Header (Module?)*/}
       {/* link to new Todo */}
       {/* link to edit specific Todo */}
-      {/* Footer (Module?) */}
 
       <div
         className="todoListWrapper"
-        style={{ background: "yellow", display: "grid", placeItems: "center" }}
+        style={{
+          backgroundColor: "#e8f3ff",
+          display: "grid",
+          placeItems: "center",
+        }}
       >
         <div
           className="d-flex gap-3 flex-column justify-content-center align-items-center"
           style={{
             height: "100vh",
-            background: "red",
             maxWidth: "800px",
           }}
         >
@@ -30,7 +31,7 @@ export function TodoOverview() {
               className="m-0"
               style={{ fontWeight: "bold", fontSize: "1.8em" }}
             >
-              My TODO'S
+              My TODO's
             </p>
           </div>
           <div
@@ -40,7 +41,7 @@ export function TodoOverview() {
               minHeight: "55%",
               background: "white",
               padding: "20px",
-              overflow: "scroll",
+              overflowY: "scroll",
             }}
           >
             <TodoTask
@@ -50,7 +51,7 @@ export function TodoOverview() {
               }
               date={"26. April 2021"}
             />
-            <TodoTask percentage={5} input={"test"} date={"test date"} />
+            <TodoTask percentage={50} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
           </div>
@@ -60,9 +61,6 @@ export function TodoOverview() {
           >
             New TODO
           </button>
-        </div>
-        <div className="d-flex gap-3 flex-column justify-content-center align-items-center">
-          <button className="btn m-3"></button>
         </div>
       </div>
     </div>

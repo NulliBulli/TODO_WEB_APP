@@ -1,10 +1,10 @@
 export function Footer() {
   return (
-    <div class="container text-center">
-      <div class="row align-items-end">
-        <div class="col">TODO</div>
-        <button class="col btn">Links</button>
-        <button class="col btn">Impressum</button>
+    <div className="container text-center" style={{ position: "relative" }}>
+      <div className="row align-items-end">
+        <button className="col btn">TODO</button>
+        <button className="col btn">Links</button>
+        <button className="col btn">Impressum</button>
       </div>
     </div>
   );

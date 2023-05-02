@@ -5,14 +5,16 @@ import TodoTask from "./TodoTask";
 export function TodoOverview() {
   return (
     <div className="TodoOverview">
-      {/* Header (Module?)*/}
       {/* link to new Todo */}
       {/* link to edit specific Todo */}
-      {/* Footer (Module?) */}
 
       <div
         className="todoListWrapper"
-        style={{backgroundColor: "#e8f3ff", display: "grid", placeItems: "center" }}
+        style={{
+          backgroundColor: "#e8f3ff",
+          display: "grid",
+          placeItems: "center",
+        }}
       >
         <div
           className="d-flex gap-3 flex-column justify-content-center align-items-center"

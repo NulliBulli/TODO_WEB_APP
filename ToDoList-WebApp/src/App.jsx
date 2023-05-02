@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       {/* <Header /> */}
-      <TodoOverview />
-      {/* <InputTodoModal /> */}
+      {/* <TodoOverview /> */}
+      <InputTodoModal />
       {/* <Footer /> */}
     </div>
   );

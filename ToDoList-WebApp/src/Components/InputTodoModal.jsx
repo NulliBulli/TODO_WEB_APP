@@ -30,19 +30,23 @@ export function InputTodoModal() {
 
         <textarea
           className="form-control"
-          id="exampleFormControlTextarea1"
-          style={{ color: "green", background: "yellow", height: "5%" }}
-          rows={1}
-          defaultValue={""}
-        />
-        <textarea
-          className="form-control"
           id="exampleFormControlTextarea2"
           style={{ color: "green", background: "yellow", height: "75%" }}
           rows={3}
           defaultValue={""}
         />
-        <DatePicker />
+        <div className="container" style={{ padding: "10px" }}>
+          <div className="row">
+            <div className="col">
+              <DatePicker />
+            </div>
+            <div className="col">
+              <button type="button" className="btn btn-success">
+                JUST DO IT
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

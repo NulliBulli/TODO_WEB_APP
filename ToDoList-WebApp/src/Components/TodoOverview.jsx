@@ -31,7 +31,7 @@ export function TodoOverview() {
             className="rounded shadow-sm bg-white"
             style={{ width: "50%", height: "55%" }}
           >
-            <div className="container" style={{ background: "green" }}>
+            <div className="container">
               <div className="row row-cols-md-3 m-1">
                 <div className="col-sm-1 col-md-1">
                   <p className="m-2" style={{ fontSize: "0.8" }}>

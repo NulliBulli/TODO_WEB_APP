@@ -48,7 +48,7 @@ export function TodoOverview() {
                     26. April 2021
                   </p>
                   <div
-                    class="btn-group"
+                    className="btn-group"
                     role="group"
                     aria-label="Basic mixed styles example"
                     style={{
@@ -63,8 +63,12 @@ export function TodoOverview() {
                   </div>
                 </div>
               </div>
-              <TodoTask />
-              <TodoTask />
+              <TodoTask
+                percentage={100}
+                input={"Beispielseite mit dem Bootstrap Framework anlegen"}
+                date={"26. April 2021"}
+              />
+              <TodoTask percentage={5} input={"test"} date={"test date"} />
             </div>
           </div>
           <button className="btn btn-info">New TODO</button>

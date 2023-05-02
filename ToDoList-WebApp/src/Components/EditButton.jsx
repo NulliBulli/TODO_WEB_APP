@@ -1,6 +1,6 @@
 export function EditButton() {
   return (
-    <button type="button" class="btn btn-outline-primary">
+    <button type="button" className="btn btn-outline-primary">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={16}

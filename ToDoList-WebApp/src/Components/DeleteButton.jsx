@@ -1,6 +1,6 @@
 export function DeleteButton() {
   return (
-    <button type="button" class="btn btn-danger">
+    <button type="button" className="btn btn-danger">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={16}

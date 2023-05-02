@@ -1,27 +1,16 @@
 import DeleteButton from "./DeleteButton";
 import { EditButton } from "./EditButton";
 
-const TodoTask = (input, percentage, done) => {
+const TodoTask = (props) => {
+  const test = "0";
   return (
     <>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <p className="m-2" style={{ fontSize: "0.8" }}>
-              0%
-            </p>
-          </div>
-          <div class="col">
-            <p className="m-2" style={{ fontSize: "0.8" }}>
-              Beispielseite mit dem Bootstrap Framework anlegen
-            </p>
-          </div>
-          <div class="col">
-            <p className="m-2" style={{ fontSize: "0.8" }}>
-              26. April 2021
-            </p>
-          </div>
-          <div class="col">
+      <div className="container text-center">
+        <div className="row">
+          <div className="col">{props.percentage + "%"}</div>
+          <div className="col">{props.input}</div>
+          <div className="col">{props.date}</div>
+          <div className="col">
             <DeleteButton />
             <EditButton />
           </div>

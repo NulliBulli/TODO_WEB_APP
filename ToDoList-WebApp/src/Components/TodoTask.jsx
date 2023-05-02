@@ -10,13 +10,69 @@ const TodoTask = (props) => {
         style={{
           border: "5px solid green",
           marginBottom: "20px",
-          borderRadius: "15px",
-          boxShadow: "10px 10px #C0C0C0",
+          borderRadius: "10px",
           minHeight: "100px",
           overflow: "scroll",
         }}
       >
         <div className="row">
+          <div
+            className="col-md-auto text-center"
+            style={{
+              background: "red",
+              display: "grid",
+              alignItems: "center",
+              maxWidth: "50px",
+            }}
+          >
+            <div
+              className="form-check"
+              style={{
+                background: "green",
+                width: "35px",
+              }}
+            >
+              <input
+                className="form-check-input"
+                type="checkbox"
+                defaultValue
+                id="flexCheckDefault"
+                style={{ height: "35px", width: "35px" }}
+              />
+              <label
+                className="form-check-label"
+                htmlFor="flexCheckDefault"
+              ></label>
+            </div>
+          </div>
+
+          <div title="inputTextWrapper" className="col-5">
+            <div
+              className="row"
+              style={{
+                background: "green",
+                height: "90px",
+                overflow: "scroll",
+              }}
+            >
+              {props.input}
+            </div>
+            <div className="row" style={{ margin: "0px" }}>
+              <div
+                className="DateWrapper"
+                style={{
+                  background: "red",
+                  position: "relative",
+                  top: "50%",
+                  msTransform: "translateY(-50%)",
+                  transform: "translateY(-50%)",
+                }}
+              >
+                {"Due to: " + props.date}
+              </div>
+            </div>
+          </div>
+
           <div className="col">
             <div
               className="percentageBox"
@@ -26,40 +82,28 @@ const TodoTask = (props) => {
                 top: "50%",
                 msTransform: "translateY(-50%)",
                 transform: "translateY(-50%)",
+                margin: "0px",
+                right: "0",
               }}
             >
               {props.percentage + "%"}
             </div>
           </div>
           <div
-            className="col-5"
-            style={{ background: "green", height: "90px", overflow: "scroll" }}
+            className="col"
+            style={{
+              background: "yellow",
+              maxWidth: "107px",
+              position: "relative",
+              right: "0",
+            }}
           >
-            {props.input}
-          </div>
-          <div className="col">
-            <div
-              className="DateWrapper"
-              style={{
-                background: "red",
-                position: "relative",
-                top: "50%",
-                msTransform: "translateY(-50%)",
-                transform: "translateY(-50%)",
-              }}
-            >
-              {props.date}
-            </div>
-          </div>
-          <div className="col text-center" style={{ background: "yellow" }}>
             <div
               className="btn-group"
               role="group"
               aria-label="Basic mixed styles example"
               style={{
-                margin: "0px",
                 position: "relative",
-                height: "40px",
                 top: "50%",
                 msTransform: "translateY(-50%)",
                 transform: "translateY(-50%)",

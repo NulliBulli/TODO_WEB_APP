@@ -37,7 +37,7 @@ export function TodoOverview() {
             className="rounded shadow-sm"
             style={{
               width: "100%",
-              height: "55%",
+              minHeight: "55%",
               background: "white",
               padding: "20px",
               overflow: "scroll",
@@ -54,7 +54,12 @@ export function TodoOverview() {
             <TodoTask percentage={5} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
           </div>
-          <button className="btn btn-info">New TODO</button>
+          <button
+            className="btn btn-info"
+            style={{ padding: "10px", margin: "10px" }}
+          >
+            New TODO
+          </button>
         </div>
         <div className="d-flex gap-3 flex-column justify-content-center align-items-center">
           <button className="btn m-3"></button>

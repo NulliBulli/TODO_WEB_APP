@@ -1,7 +1,7 @@
 import DeleteButton from "./DeleteButton";
 import { EditButton } from "./EditButton";
 
-const TodoTask = (props) => {
+export function TodoTask(props) {
   const test = "0";
   return (
     <>
@@ -27,6 +27,7 @@ const TodoTask = (props) => {
               className="form-check"
               style={{
                 width: "35px",
+                height: "0px"
               }}
             >
               <input
@@ -95,7 +96,7 @@ const TodoTask = (props) => {
                 transform: "translateY(-50%)",
               }}
             >
-              <EditButton />
+              <EditButton/>
               <DeleteButton />
             </div>
           </div>

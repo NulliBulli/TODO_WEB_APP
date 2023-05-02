@@ -49,7 +49,7 @@ export function TodoOverview() {
               }
               date={"26. April 2021"}
             />
-            <TodoTask percentage={5} input={"test"} date={"test date"} />
+            <TodoTask percentage={50} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
           </div>

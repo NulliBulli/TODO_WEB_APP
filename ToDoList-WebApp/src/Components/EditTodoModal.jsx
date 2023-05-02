@@ -1,6 +1,6 @@
 import DatePicker from "./DatePicker";
 
-export function InputTodoModal() {
+export function EditTodoModal() {
   return (
     <>
       <div
@@ -29,9 +29,9 @@ export function InputTodoModal() {
         <textarea
           className="form-control"
           id="exampleFormControlTextarea2"
-          style={{Height: "75%"}}
+          style={{height: "75%" }}
           rows={15}
-          defaultValue={""}
+          defaultValue={"Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen"}
         />
         <div className="container" style={{ padding: "10px" }}>
           <div className="row">
@@ -39,7 +39,7 @@ export function InputTodoModal() {
               <DatePicker />
             </div>
             <div className="col">
-              <button type="button" className="btn btn-info">
+              <button type="button" className="btn btn-info" >
                 Confirm
               </button>
             </div>
@@ -50,4 +50,4 @@ export function InputTodoModal() {
   );
 }
 
-export default InputTodoModal;
+export default EditTodoModal;

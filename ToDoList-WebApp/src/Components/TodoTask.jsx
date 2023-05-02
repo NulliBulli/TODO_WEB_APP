@@ -6,13 +6,13 @@ const TodoTask = (props) => {
   return (
     <>
       <div
-        className="container text-center"
+        className="container"
         style={{
           border: "5px solid green",
           marginBottom: "20px",
-          borderRadius: "10px",
+          borderRadius: "15px",
           boxShadow: "10px 10px #C0C0C0",
-          height: "100px",
+          minHeight: "100px",
           overflow: "scroll",
         }}
       >
@@ -51,7 +51,7 @@ const TodoTask = (props) => {
               {props.date}
             </div>
           </div>
-          <div className="col" style={{ background: "yellow" }}>
+          <div className="col text-center" style={{ background: "yellow" }}>
             <div
               className="btn-group"
               role="group"

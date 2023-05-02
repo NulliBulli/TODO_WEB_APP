@@ -10,14 +10,21 @@ export function TodoOverview() {
       {/* link to edit specific Todo */}
       {/* Footer (Module?) */}
 
-      <div>
+      <div
+        className="todoListWrapper"
+        style={{ background: "yellow", display: "grid", placeItems: "center" }}
+      >
         <div
           className="d-flex gap-3 flex-column justify-content-center align-items-center"
-          style={{ height: "100vh" }}
+          style={{
+            height: "100vh",
+            background: "red",
+            maxWidth: "800px",
+          }}
         >
           <div
             className="d-flex rounded justify-content-center align-items-center shadow-sm bg-info"
-            style={{ width: "70%", height: "10%" }}
+            style={{ width: "100%", height: "10%" }}
           >
             <p
               className="m-0"
@@ -27,19 +34,25 @@ export function TodoOverview() {
             </p>
           </div>
           <div
-            className="rounded shadow-sm bg-white"
-            style={{ width: "70%", height: "55%" }}
+            className="rounded shadow-sm"
+            style={{
+              width: "100%",
+              height: "55%",
+              background: "white",
+              padding: "20px",
+              overflow: "scroll",
+            }}
           >
-            <div className="container">
-              <TodoTask
-                percentage={100}
-                input={
-                  "Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen "
-                }
-                date={"26. April 2021"}
-              />
-              <TodoTask percentage={5} input={"test"} date={"test date"} />
-            </div>
+            <TodoTask
+              percentage={100}
+              input={
+                "Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen "
+              }
+              date={"26. April 2021"}
+            />
+            <TodoTask percentage={5} input={"test"} date={"test date"} />
+            <TodoTask percentage={5} input={"test"} date={"test date"} />
+            <TodoTask percentage={5} input={"test"} date={"test date"} />
           </div>
           <button className="btn btn-info">New TODO</button>
         </div>

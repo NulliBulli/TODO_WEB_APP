@@ -1,4 +1,5 @@
 import DatePicker from "./DatePicker";
+import { Link } from "react-router-dom";
 
 export function InputTodoModal() {
   return (
@@ -45,9 +46,11 @@ export function InputTodoModal() {
                 <DatePicker />
               </div>
               <div className="col">
-                <button type="button" className="btn btn-info">
-                  Confirm
-                </button>
+                <Link to="/">
+                  <button type="button" className="btn btn-info">
+                    Confirm
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

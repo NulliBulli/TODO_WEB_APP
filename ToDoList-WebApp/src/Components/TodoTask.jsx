@@ -27,7 +27,7 @@ export function TodoTask(props) {
               className="form-check"
               style={{
                 width: "35px",
-                height: "0px"
+                height: "0px",
               }}
             >
               <input
@@ -44,12 +44,11 @@ export function TodoTask(props) {
             </div>
           </div>
 
-          <div title="inputTextWrapper" className="d-flex flex-column col-5 m-3">
-            <div
-              className="row m-0"
-              style={{
-              }}
-            >
+          <div
+            title="inputTextWrapper"
+            className="d-flex flex-column col-5 m-3"
+          >
+            <div className="row m-0" style={{}}>
               {props.input}
             </div>
             <div className="row">
@@ -57,7 +56,7 @@ export function TodoTask(props) {
                 className="DateWrapper"
                 style={{
                   position: "relative",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
                 }}
               >
                 {props.date}
@@ -96,7 +95,7 @@ export function TodoTask(props) {
                 transform: "translateY(-50%)",
               }}
             >
-              <EditButton/>
+              <EditButton />
               <DeleteButton />
             </div>
           </div>
@@ -104,6 +103,6 @@ export function TodoTask(props) {
       </div>
     </>
   );
-};
+}
 
 export default TodoTask;

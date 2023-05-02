@@ -1,5 +1,4 @@
-import DeleteButton from "./DeleteButton";
-import { EditButton } from "./EditButton";
+import { Link } from "react-router-dom";
 import TodoTask from "./TodoTask";
 
 export function TodoOverview() {
@@ -55,12 +54,14 @@ export function TodoOverview() {
             <TodoTask percentage={5} input={"test"} date={"test date"} />
             <TodoTask percentage={5} input={"test"} date={"test date"} />
           </div>
-          <button
-            className="btn btn-info"
-            style={{ padding: "10px", margin: "10px" }}
-          >
-            New TODO
-          </button>
+          <Link to="/InputModal">
+            <button
+              className="btn btn-info"
+              style={{ padding: "10px", margin: "10px" }}
+            >
+              New TODO
+            </button>
+          </Link>
         </div>
       </div>
     </div>

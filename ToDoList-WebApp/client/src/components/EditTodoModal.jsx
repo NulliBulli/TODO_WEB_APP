@@ -1,11 +1,19 @@
 import DatePicker from "./DatePicker";
-import { Link } from "react-router-dom";
+
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import EditTask from "./editTask";
 
-export function EditTodoModal(props) {
-  const [backendData, setBackendData] = useState([{}]);
+export function EditTodoModal() {
+  const [backendData, setBackendData] = useState({});
+  const [alteredTask, setAlteredTask] = useState({});
   const params = useParams();
+  const testTask = {
+    id: 4,
+    description: "todo4",
+    dueDate: "2023-04-01",
+    percentage: 50,
+  };
 
   useEffect(() => {
     fetch(`/api/editModal/${params.id}`)
@@ -13,7 +21,7 @@ export function EditTodoModal(props) {
       .then((data) => setBackendData(data));
   }, []);
 
-  console.log(backendData.description);
+  // console.log(backendData.dueDate);
   return (
     <div className="EditModal">
       <div
@@ -55,11 +63,7 @@ export function EditTodoModal(props) {
                 <DatePicker />
               </div>
               <div className="col">
-                <Link to="/">
-                  <button type="button" className="btn btn-info">
-                    Confirm
-                  </button>
-                </Link>
+                <EditTask task={testTask} paraId={"34"} />
               </div>
             </div>
           </div>

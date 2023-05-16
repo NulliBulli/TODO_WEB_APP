@@ -4,12 +4,12 @@ export function Footer() {
   return (
     <div className="container text-center" style={{ position: "relative" }}>
       <div className="row align-items-end">
-        <Link to="/">
+        <Link to="/tasks">
           <button className="col btn">TODO</button>
         </Link>
 
         <button className="col btn">Links</button>
-        <Link to="/Impressum">
+        <Link to="/impressum">
           <button className="col btn">Impressum</button>
         </Link>
       </div>

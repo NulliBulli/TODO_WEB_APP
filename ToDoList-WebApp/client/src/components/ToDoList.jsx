@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TodoTask from "./TodoTask";
 
-export function TodoList() {
+export function TodoList({ setTask }) {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
@@ -12,14 +12,17 @@ export function TodoList() {
 
   return (
     <>
-      {typeof backendData.Tasks === "undefined" ? (
+      {typeof backendData.tasks === "undefined" ? (
         <p>Loading...</p>
       ) : (
-        backendData.Tasks.map((task) => (
+        backendData.tasks.map((task) => (
           <TodoTask
+            key={task.id}
+            id={task.id}
             percentage={task.percentage}
             input={task.description}
             date={task.dueDate}
+            setTask={setTask}
           />
         ))
       )}

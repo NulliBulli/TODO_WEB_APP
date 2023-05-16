@@ -2,6 +2,12 @@ import DeleteButton from "./DeleteButton";
 import { EditButton } from "./EditButton";
 
 export function TodoTask(props) {
+  const helpProp = {
+    id: props.id,
+    percentage: props.percentage,
+    input: props.input,
+    date: props.date,
+  };
   return (
     <>
       <div
@@ -92,7 +98,7 @@ export function TodoTask(props) {
                 transform: "translateY(-50%)",
               }}
             >
-              <EditButton />
+              <EditButton task={helpProp} setTask={props.setTask} />
               <DeleteButton />
             </div>
           </div>

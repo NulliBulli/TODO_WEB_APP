@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import TodoTask from "./TodoTask";
 import { TodoList } from "./ToDoList";
 
-export function TodoOverview() {
+export function TodoOverview({ setTask }) {
   return (
     <div className="TodoOverview">
       {/* link to new Todo */}
@@ -44,9 +43,9 @@ export function TodoOverview() {
               overflowY: "scroll",
             }}
           >
-            <TodoList />
+            <TodoList setTask={setTask} />
           </div>
-          <Link to="/InputModal">
+          <Link to="/inputForm">
             <button
               className="btn btn-info"
               // style={{ padding: "10px", margin: "10px" }}

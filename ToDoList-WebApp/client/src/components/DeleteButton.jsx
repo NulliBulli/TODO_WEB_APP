@@ -1,6 +1,10 @@
 export function DeleteButton() {
   return (
-    <button type="button" className="btn btn-danger">
+    <button
+      // onClick={deleteCustomer(props.id)}
+      type="button"
+      className="btn btn-danger"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={16}
@@ -16,3 +20,5 @@ export function DeleteButton() {
   );
 }
 export default DeleteButton;
+
+// function deleteCustomer();

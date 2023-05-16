@@ -1,12 +1,21 @@
 import DatePicker from "./DatePicker";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-export function EditTodoModal() {
+export function EditTodoModal(props) {
+  const [backendData, setBackendData] = useState([{}]);
+  const params = useParams();
+
+  useEffect(() => {
+    fetch(`/api/editModal/${params.id}`)
+      .then((response) => response.json())
+      .then((data) => setBackendData(data));
+  }, []);
+
+  console.log(backendData.description);
   return (
     <div className="EditModal">
-      {/* link to new Todo */}
-      {/* link to edit specific Todo */}
-
       <div
         className="EditModalWrapper"
         style={{
@@ -38,9 +47,7 @@ export function EditTodoModal() {
             id="exampleFormControlTextarea2"
             style={{ height: "75%" }}
             rows={15}
-            defaultValue={
-              "Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen"
-            }
+            defaultValue={backendData.description}
           />
           <div className="container" style={{ padding: "10px" }}>
             <div className="row">

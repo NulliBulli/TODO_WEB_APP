@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
-export function EditButton() {
+export function EditButton(props) {
+  const helperProp = props.task;
+
   return (
-    <Link to="/EditModal">
+    <Link to={`/editModal/${helperProp.id}`}>
       <button type="button" className="btn btn-outline-primary">
         <svg
           xmlns="http://www.w3.org/2000/svg"

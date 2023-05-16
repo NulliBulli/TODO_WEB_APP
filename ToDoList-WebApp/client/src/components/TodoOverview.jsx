@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TodoTask from "./TodoTask";
+import { TodoList } from "./ToDoList";
 
 export function TodoOverview() {
   return (
@@ -43,21 +44,12 @@ export function TodoOverview() {
               overflowY: "scroll",
             }}
           >
-            <TodoTask
-              percentage={100}
-              input={
-                "Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen Beispielseite mit dem Bootstrap Framework anlegen "
-              }
-              date={"26. April 2021"}
-            />
-            <TodoTask percentage={50} input={"test"} date={"test date"} />
-            <TodoTask percentage={5} input={"test"} date={"test date"} />
-            <TodoTask percentage={5} input={"test"} date={"test date"} />
+            <TodoList />
           </div>
           <Link to="/InputModal">
             <button
               className="btn btn-info"
-              style={{ padding: "10px", margin: "10px" }}
+              // style={{ padding: "10px", margin: "10px" }}
             >
               New TODO
             </button>

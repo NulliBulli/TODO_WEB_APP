@@ -2,7 +2,6 @@ import DeleteButton from "./DeleteButton";
 import { EditButton } from "./EditButton";
 
 export function TodoTask(props) {
-  const test = "0";
   return (
     <>
       <div
@@ -48,9 +47,7 @@ export function TodoTask(props) {
             title="inputTextWrapper"
             className="d-flex flex-column col-5 m-3"
           >
-            <div className="row m-0" style={{}}>
-              {props.input}
-            </div>
+            <div className="row m-0">{props.input}</div>
             <div className="row">
               <div
                 className="DateWrapper"

@@ -4,10 +4,10 @@ const app = express();
 app.get("/api", (req, res) => {
   res.json({
     Tasks: [
-      ["name1", "date1", 0],
-      ["name2", "date2", 0],
-      ["name3", "date3", 0],
-      ["name4", "date4", 0],
+      { key: 1, description: "todo1", dueDate: "01.01.0001", percentage: 0 },
+      { key: 2, description: "todo2", dueDate: "02.02.0002", percentage: 0 },
+      { key: 3, description: "todo3", dueDate: "03.03.0003", percentage: 0 },
+      { key: 4, description: "todo4", dueDate: "04.04.0004", percentage: 50 },
     ],
   });
 });

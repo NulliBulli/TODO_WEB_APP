@@ -11,14 +11,18 @@ export function TodoList() {
   }, []);
 
   return (
-    <div>
+    <>
       {typeof backendData.Tasks === "undefined" ? (
         <p>Loading...</p>
       ) : (
-        backendData.Tasks.map((task, i) => (
-          <TodoTask percentage={0} input={task} date={task} />
+        backendData.Tasks.map((task) => (
+          <TodoTask
+            percentage={task.percentage}
+            input={task.description}
+            date={task.dueDate}
+          />
         ))
       )}
-    </div>
+    </>
   );
 }
